@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:	gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2px;
+    margin: 0;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 35%; /* No se cambia este valor */
+    height: 90%; /* No se cambia este valor */
+    border-radius: 5%;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between; /* Mantener alineación horizontal */
+    background-color: #007BFF;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 60px; /* Asegura que el menú tenga una altura fija */
+    box-sizing: border-box; /* Asegura que el padding se incluya en la altura */
+    z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
+}
+.menu a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s;
+    flex: 1; /* Ocupa espacio igual entre los enlaces */
+    margin: 0 5px; /* Espaciado entre enlaces */
+    
+}
+
+.menu a .titulo {
+    display: block;
+    opacity: 1;
+}
+
+.menu a:hover, .menu a:focus {
+    color: white;
+}
+
+.menu a:hover .icono,
+.menu a:focus .icono {
+    filter: brightness(0) saturate(100%) invert(1);
+}
+
+.menu a .icono {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+    transition: filter 0.3s;
+}
+
+#seccion1 {
+    display: block; /* Mostrar la sección inicial */
+}
+
+/* Mostrar la sección correspondiente al hacer clic */
+.menu a:focus + .contenido,
+.menu a:hover + .contenido {
+    display: block;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .tarjeta {
+        width: 90%; 
+        height: auto; 
+    }
+
+    .menu a {
+        flex: 1 1 100%; 
+        margin: 5px 0; 
+    }
+}
+
+.contenido .empresa{
+    color: red;
+    font-size: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.contenido .empresalog{
+    width: 50%;
+    height: 50%;
+    margin-left:  25%;
+}
+.perfil {
+    background-color: white; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    height: 100%;
+    max-width: 100%; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    text-align: center; 
+}
+
+.foto-superior {
+    width: 100%; 
+    height: 180px; 
+    background-image: url('img/LOGO.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%; 
+    background-image: url('img/user_icon_001.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    margin: -50px auto 15px; 
+    border: 3px solid white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.descripcion {
+    padding: 10px; 
+}
+
+.descripcion h2 {
+    margin: 0; 
+    font-size: 1.5em;
+}
+
+.descripcion p {
+    color: #555; 
+    font-size: 1em; 
+}
+.contenido {
+    width: 100%;               
+    height: calc(100% - 50px); 
+    display: flex;             
+    justify-content: center;   
+    align-items: flex-start; 
+    overflow-y: auto; 
+    position: relative; 
+}
+
+.scrollable {
+    padding: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.catalogo {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.item {
+    text-align: center; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    overflow: hidden; 
+}
+
+.item img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+}
+.ofertas{
+    padding: 10px;
+    margin: 0;
+    color: red;
+    font-size: 20px;
+}
+
+.contacto-lista {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.contacto-item {
+    margin: 10px 0; 
+}
+
+.contacto-item a {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    color: black; 
+}
+
+.contacto-icono {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px; 
+}

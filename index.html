@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tarjeta de Presentación</title>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="menu">
+            <a href="#seccion1" onclick="mostrarSeccion('seccion1')">
+                <img src="iconos/user_17740782.png" alt="Perfil" class="icono">
+                <span class="titulo">Mi perfil</span>
+            </a>
+            <a href="#seccion2" onclick="mostrarSeccion('seccion2')">
+                <img src="iconos/office-building_4300058.png" alt="Empresa" class="icono">
+                <span class="titulo">Empresa</span>
+            </a>
+            <a href="#seccion3" onclick="mostrarSeccion('seccion3')">
+                <img src="iconos/product_15291397.png" alt="Productos" class="icono">
+                <span class="titulo">Productos</span>
+            </a>
+            <a href="#seccion4" onclick="mostrarSeccion('seccion4')">
+                <img src="iconos/Tag-Sale-Price--Streamline-Freehand.png" alt="Ofertas" class="icono">
+                <span class="titulo">Ofertas</span>
+            </a>
+            <a href="#seccion6" onclick="mostrarSeccion('seccion6')">
+                <img src="iconos/Paginate-Filter-Mail--Streamline-Freehand.png" alt="Contacto" class="icono">
+                <span class="titulo">Contacto</span>
+            </a>
+        </div>
+
+       <!--mi perfil seccion-->
+        <div id="seccion1" class="contenido" style="display: block;">
+         <div class="perfil">
+          <div class="foto-superior"></div>
+          <div class="foto-perfil"></div>
+          <div class="descripcion">
+            <h2>ING. Julio</h2>
+            <p>Creador/Dueño de la empresa</p>
+          </div>
+         </div>
+       </div>
+
+        <!--empresa seccion-->
+        <div id="seccion2" class="contenido" style="display: none;">
+            <h1 class="empresa">Nuestra empresa:</h1>
+            <div class="empresalog"><img class="empresalog" src="img/rs.png"></div>
+
+
+        </div>
+       
+        <!--productos seccion-->
+   <div id="seccion3" class="contenido" style="display: none;">
+    <div class="scrollable">
+      <ul class="catalogo">
+        <li class="item">
+            <img src="img/img11.png" alt="Descripción de imagen 1">
+            <p>Panel 1</p>
+        </li>
+        <li class="item">
+            <img src="img/img3.png" alt="Descripción de imagen 2">
+            <p>Internet</p>
+        </li>
+        <li class="item">
+            <img src="img/img8.png" alt="Descripción de imagen 3">
+            <p>Detector</p>
+        </li>
+        
+      </ul>
+   </div>
+   </div>
+        
+
+
+        <!--ofertas seccion-->
+        <div id="seccion4" class="contenido" style="display: none;"><p class="ofertas">Ofertas</p>
+            <div class="scrollable">
+                <ul class="catalogo">
+                  <li class="item">
+                      <img src="img/img11.png" alt="Descripción de imagen 1">
+                      <p>Panel con rebajas </p>
+                  </li>
+                  <li class="item">
+                      <img src="img/img3.png" alt="Descripción de imagen 2">
+                      <p>Internet al mejor plan</p>
+                  </li>
+                  <li class="item">
+                      <img src="img/img8.png" alt="Descripción de imagen 3">
+                      <p>Detector la mejor calidad a mejor precio</p>
+                  </li>
+        </div>
+        <!--contacto seccion-->
+<div  id="seccion6" class="contenido" style="display: none;">
+     <p class="ofertas">Contacto de empresa</p>
+    <ul class="contacto-lista">
+        <li class="contacto-item">
+            <a href="#" target="_blank">
+                <img src=""  class="contacto-icono">
+                <span>Enlace 1</span>
+            </a>
+        </li>
+        <li class="contacto-item">
+            <a href="#" target="_blank">
+                <img src="iconos/icono2.png"  class="contacto-icono">
+                <span>Enlace 2</span>
+            </a>
+        </li>
+        <li class="contacto-item">
+            <a href="#" target="_blank">
+                <img src="iconos/icono3.png" class="contacto-icono">
+                <span>Enlace 3</span>
+            </a>
+        </li>
+       
+    </ul>
+</div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
