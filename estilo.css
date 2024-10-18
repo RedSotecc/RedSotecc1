@@ -44,6 +44,9 @@ body {
 
 .menu a .titulo {
     display: block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega "..." si el texto es demasiado largo */
     opacity: 1;
 }
 
@@ -72,18 +75,24 @@ body {
     display: block;
 }
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
     .tarjeta {
         width: 90%; 
         height: auto; 
     }
-
+    .menu {
+        flex-direction: column; /* Cambiar la dirección a columna */
+    }
     .menu a {
         flex: 1 1 100%; 
-        margin: 5px 0; 
+        margin: 5px 0; /* Espaciado entre enlaces en columna */
+        text-align: center; /* Alinear el texto al centro */
+    }
+    .contenido {
+        padding: 10px; /* Añadir un poco de espacio interno */
     }
 }
+
 
 .contenido .empresa{
     color: red;
@@ -143,12 +152,15 @@ body {
 }
 .contenido {
     width: 100%;               
-    height: calc(100% - 50px); 
+    height: calc(100% - 60px); 
     display: flex;             
     justify-content: center;   
     align-items: flex-start; 
     overflow-y: auto; 
     position: relative; 
+   
+    
+
 }
 
 .scrollable {
@@ -204,3 +216,4 @@ body {
     height: 40px; 
     margin-right: 10px; 
 }
+
