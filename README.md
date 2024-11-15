@@ -1,1 +1,0 @@
-# RedSotecc1
